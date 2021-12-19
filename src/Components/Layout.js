@@ -11,6 +11,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { SubjectOutlined } from '@material-ui/icons';
 import { AddCircleOutlined } from '@material-ui/icons';
+import { EventNote } from '@material-ui/icons';
 import Avatar from "@material-ui/core/Avatar";
 
 // date-fns
@@ -99,7 +100,8 @@ const Layout = ({ children }) => {
             >
                 <div>
                     <Typography variant='h5' className={classes.title}>
-                        Ninja Notes
+                        <EventNote />
+                        MUI - ToDo List
                     </Typography>
                 </div>
                 <List>

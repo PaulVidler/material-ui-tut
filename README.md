@@ -1,5 +1,11 @@
-### Starter Project for the Material UI playlist
+### MUI ToDo list app - Forked from https://github.com/iamshaunjp/material-ui-tut
 
 Download the code & run **npm install** to install dependencies before starting the app.
 
-You'll also need to install Material UI as a dependency. To do this run **npm install @material-ui/core**
+Create todo:
+
+![logo](https://github.com/PaulVidler/material-ui-tut/public/AddNote.PNG)
+
+View/Delete todo:
+
+![logo](https://github.com/PaulVidler/material-ui-tut/public/ToDos.PNG)
