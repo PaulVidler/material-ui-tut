@@ -4,8 +4,8 @@ Download the code & run **npm install** to install dependencies before starting 
 
 Create todo:
 
-![logo](https://github.com/PaulVidler/material-ui-tut/public/AddNote.PNG)
+![logo](https://github.com/PaulVidler/material-ui-tut/blob/lesson-1/public/AddNote.PNG)
 
 View/Delete todo:
 
-![logo](https://github.com/PaulVidler/material-ui-tut/public/ToDos.PNG)
+![logo](https://github.com/PaulVidler/material-ui-tut/blob/lesson-1/public/Todos.PNG)
