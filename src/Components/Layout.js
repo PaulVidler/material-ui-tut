@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
 // mui
-import { makeStyles } from "@material-ui/core";
+import { AppBar, makeStyles, Toolbar } from "@material-ui/core";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
@@ -11,6 +11,10 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import { SubjectOutlined } from '@material-ui/icons';
 import { AddCircleOutlined } from '@material-ui/icons';
+import Avatar from "@material-ui/core/Avatar";
+
+// date-fns
+import { format } from 'date-fns'
 
 const drawerWidth = 240;
 
@@ -37,6 +41,17 @@ const useStyles = makeStyles((theme) =>
         title: {
             padding: theme.spacing(2)
         },
+        appbar:{
+            width: `calc(100% - ${drawerWidth}px)`
+        },
+        toolbar: theme.mixins.toolbar,
+        date:{
+            flexGrow: 1
+        },
+        avatar: {
+            marginLeft: theme.spacing(2)
+        }
+        
     }
 });
 
@@ -62,7 +77,17 @@ const Layout = ({ children }) => {
     return (
         <div className={classes.root}>
             {/* app bar */}
-
+            <AppBar className={classes.appbar} elevation='0'>
+                <Toolbar>
+                    <Typography className={classes.date}>
+                        Today is: {format(new Date(), 'do MMMM Y')}
+                    </Typography>
+                    <Typography>
+                        Paul
+                    </Typography>
+                    <Avatar src='../../paul.jpg' className={classes.avatar} />
+                </Toolbar>
+            </AppBar>
             {/* side drawer */}
             <Drawer
             className={classes.drawer}
@@ -94,6 +119,7 @@ const Layout = ({ children }) => {
                 </List>
             </Drawer>
             <div className={classes.page}>
+                <div className={classes.toolbar}></div>
                 {children}
             </div>
         </div>
